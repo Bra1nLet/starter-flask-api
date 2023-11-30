@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Задача 6</title>
+    </head>
+    <body>
+        <a href="/"> Повернутись </a>
+        <h1>Введіть початкові данні</h1>
+        <form method="post">
+            <label>q</label>
+            <input id="q" name="Q" placeholder="0.0" maxlength="6" type="text">
+            <label>x</label>
+            <input id="x" name="x" placeholder="0.0" maxlength="6" type="text">
+            <br>
+            <label>y</label>
+            <input id="y" name="y" placeholder="0.0" maxlength="6" type="text">
+            <label>m</label>
+            <input id="m" name="m" placeholder="0.0" maxlength="6" type="text">
+            <br>
+            <br>
+            <button>Вирішити задачу</button>
+        </form>
+        {% if context %}
+            <h1>Завдання</h1>
+            {% for i in context.task %}
+                {{ i }}
+                <br>
+            {% endfor %}
+            <h1>Вирішення</h1>
+            {% for i in context.result %}
+                {{ i }}
+                <br>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>

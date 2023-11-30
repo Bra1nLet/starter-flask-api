@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Задача 8</title>
+    </head>
+    <body>
+        <a href="/"> Повернутись </a>
+        <h1>Введіть початкові данні</h1>
+        <form method="post">
+            <label>M1</label>
+            <input id="m1" name="m1" placeholder="0.0" maxlength="6" type="text">
+            <label>N1</label>
+            <input id="n1" name="n1" placeholder="0.0" maxlength="6" type="text">
+            <br>
+            <label>M2</label>
+            <input id="m2" name="m2" placeholder="0.0" maxlength="6" type="text">
+            <label>N2</label>
+            <input id="n2" name="n2" placeholder="0.0" maxlength="6" type="text">
+            <br>
+            <label>M3</label>
+            <input id="m3" name="m3" placeholder="0.0" maxlength="6" type="text">
+            <label>N3</label>
+            <input id="n3" name="n3" placeholder="0.0" maxlength="6" type="text">
+            <label>Pn</label>
+            <input id="pn" name="pn" placeholder="0.0" maxlength="6" type="text">
+            <br>
+            <br>
+            <button>Вирішити задачу</button>
+        </form>
+        {% if context %}
+            <h1>Завдання</h1>
+            {% for i in context.task %}
+                {{ i }}
+                <br>
+            {% endfor %}
+            <h1>Вирішення</h1>
+            {% for i in context.result %}
+                {{ i }}
+                <br>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>
